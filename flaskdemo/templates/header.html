@@ -1,0 +1,13 @@
+<html>
+<head>
+    <title>Flask App</title>
+    <link href="{{url_for('static', filename = 'css/bootstrap.min.css')}}" rel="stylesheet">
+<link rel="shortcut icon" href="{{url_for('static', filename = 'teacher.png' )}}">
+</head>
+<body>
+<div class="container">
+    <div class="well text-center">
+        <h1>First Flask App</h1>
+        <h1> hello {{username}}</h1>
+        <li align="left" role="presentation"><a href="logout">Logout</a></li>
+    </div>

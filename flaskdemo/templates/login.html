@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <title>Flask Intro - login page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="static/bootstrap.min.css" rel="stylesheet" media="screen">
+  </head>
+  <body >
+    <div class="container" align=center>
+      <h1 stylesheet>Please login</h1>
+      <br>
+      <form action="" method="post">
+        <input type="text" placeholder="Username" name="username" value="{{
+          request.form.username }}">
+         <input type="password" placeholder="Password" name="password" value="{{
+          request.form.password }}">
+          <p>
+            <input name="inputRemember" checked="{% if 'rem' in request.cookies %} {{ request.cookies.get('rem') }} {% endif %}" type="checkbox" autocomplete="off">Remember Me</input>
+          </p>
+          <br>
+          <input class="btn btn-default" type="submit" value="Login">
+ 
+      </form>
+      <div class="msg">{{ msg }}</div>
+      {{data}}
+    </div>
+  </body>
+</html>
